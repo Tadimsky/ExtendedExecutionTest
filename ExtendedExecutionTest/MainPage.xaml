@@ -27,10 +27,10 @@
 				<TextBlock x:Name="txtTime" />
 				<TextBlock x:Name="txtReason" />
 			</StackPanel>
-			
+
 			<CheckBox Grid.Row="2" Content="Request Extended Execution?" IsChecked="True" x:Name="chkExtendedEx" Checked="chkExtendedEx_Checked" Unchecked="chkExtendedEx_Checked"></CheckBox>
 			<Button Grid.Row="3" Grid.Column="0" Content="Hello Jonno" Height="32" Width="99" />
-			
+
 		</Grid>
 	</Grid>
 </Page>

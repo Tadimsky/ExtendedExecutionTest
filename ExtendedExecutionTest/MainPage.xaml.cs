@@ -17,21 +17,21 @@ using Windows.UI.Xaml.Navigation;
 
 namespace ExtendedExecutionTest
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
-    {
+	/// <summary>
+	/// An empty page that can be used on its own or navigated to within a Frame.
+	/// </summary>
+	public sealed partial class MainPage : Page
+	{
 
 		public TimeSpan Duration { get; set; }
 		public string Reason { get; set; }
 
-        public MainPage()
-        {
+		public MainPage()
+		{
 			InitializeComponent();
 
-	        //App.Current.Suspending += (sender, args) => { Spinner.IsActive = true; };
-        }
+			//App.Current.Suspending += (sender, args) => { Spinner.IsActive = true; };
+		}
 
 
 		protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -55,10 +55,11 @@ namespace ExtendedExecutionTest
 			try
 			{
 				reason = (string)App.LocalSettings.Values["RevokedReason"];
-				
+
 			}
-			catch (Exception er) {
-				
+			catch (Exception er)
+			{
+
 			}
 			App.LocalSettings.Values.Clear();
 
@@ -66,7 +67,7 @@ namespace ExtendedExecutionTest
 			txtReason.Text = $"Reason: {reason}";
 
 			txtPrevState.Text = $"Previous Execution State: {prevexec}";
-        }
+		}
 
 		protected override void OnNavigatedFrom(NavigationEventArgs e)
 		{
