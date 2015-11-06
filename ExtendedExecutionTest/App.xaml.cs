@@ -123,9 +123,7 @@ namespace ExtendedExecutionTest
 
 			Debug.WriteLine("Suspending...");
 			DateTime now = DateTime.Now;
-
 			LocalSettings.Values["Suspended"] = now.Ticks;
-
 
 			var deferral = e.SuspendingOperation.GetDeferral();
 			Debug.WriteLine($"Suspend Deadline: {e.SuspendingOperation.Deadline - now}");
