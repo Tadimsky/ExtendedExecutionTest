@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="ExtendedExecutionTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ExtendedExecutionTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<ProgressRing HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsActive="True" Margin="10" x:Name="Spinner" />
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="100"/>
+				<RowDefinition Height="100"/>
+			</Grid.RowDefinitions>
+			<TextBlock Text="Extended Execution" Grid.ColumnSpan="3" Style="{StaticResource SubheaderTextBlockStyle}"/>
+
+			<StackPanel Orientation="Vertical" Grid.Row="1">
+				<TextBlock Text="Hello" x:Name="txtPrevState"/>
+				<TextBlock Text="Suspend Operation" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0 10 10 10"/>
+				<TextBlock x:Name="txtTime" />
+				<TextBlock x:Name="txtReason" />
+			</StackPanel>
+			
+			<CheckBox Grid.Row="2" Content="Request Extended Execution?" IsChecked="True" x:Name="chkExtendedEx" Checked="chkExtendedEx_Checked" Unchecked="chkExtendedEx_Checked"></CheckBox>
+			<Button Grid.Row="3" Grid.Column="0" Content="Hello Jonno" Height="32" Width="99" />
+			
+		</Grid>
+	</Grid>
+</Page>
